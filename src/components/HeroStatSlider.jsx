@@ -5,7 +5,7 @@ const STATS = [
   { num: '24h', label: 'Operational Speed', subtext: 'Rapid turnaround on critical file reviews.' },
   { num: '15+', label: 'Premier Partners', subtext: "Trusted by the nation's leading firms." },
   { num: '82%', label: 'Settlement Rate', subtext: 'Higher likelihood of favorable outcomes.' },
-  { num: '10K+', label: 'Cases Processed', subtext: 'Proven track record of excellence.' },
+  { num: '200+', label: 'Cases Processed', subtext: 'Proven track record of excellence.' },
 ];
 
 export default function HeroStatSlider() {

@@ -8,17 +8,21 @@ const WHY_ITEMS = [
   { icon: 'expand', text: 'The 1st proactive AI platform for personal injury' },
   { icon: 'grid', text: 'Built on the largest personal injury dataset' },
   { icon: 'message', text: 'A world-class onboarding team' },
-  { icon: 'phone', text: 'Reps in every US territory' },
   { icon: 'shield', text: 'SOC 2–audited and HIPAA–attested' },
-  { icon: 'users', text: 'The best PI firms use Pleacode' },
+  { icon: 'users', text: 'The best personal injury firms use Pleacode' },
 ];
 
 const BENEFITS = [
-  { title: 'Faster turnaround', desc: '24–48 hours delivery on demand letters and case reviews' },
+  { title: 'Faster turnaround', desc: '24–72 hours delivery on demand letters and case reviews' },
   { title: 'Consistent formatting', desc: 'Uniform structure across all cases for seamless integration' },
   { title: 'Aligned narratives', desc: 'Demand letters perfectly aligned with medical chronology' },
   { title: 'Clear liability framing', desc: 'Precise damages breakdown and liability presentation' },
   { title: 'Scalable operations', desc: 'Grows with your caseload without increasing overhead' },
+  { title: 'Audit-ready documentation', desc: 'Full traceability and structured records for every case' },
+  { title: 'Fewer revisions', desc: 'Draft quality that reduces rounds of edits and speeds time to send' },
+  { title: 'Dedicated support', desc: 'Expert onboarding and ongoing support tailored to your practice' },
+  { title: 'Settlement-focused drafts', desc: 'Demands built to anchor strong positions and accelerate resolution' },
+  { title: 'Secure & compliant', desc: 'Enterprise-grade security and compliance for sensitive case data' },
 ];
 
 const PROCESS_STEPS = [
@@ -86,7 +90,7 @@ export default function Home() {
 
       <section className="why-choose-section fade-in" id="why-choose">
         <div className="section-label">Why Law Firms Choose Pleacode</div>
-        <h2 className="section-title">Built for High-Volume PI Practices</h2>
+        <h2 className="section-title">Built for High-Volume Personal Injury Practices</h2>
         <p className="section-subtitle">Use outcome-based language, not skills. We don&apos;t replace attorneys. We give them back their time.</p>
         <div className="benefits-grid">
           {BENEFITS.map((b) => (
@@ -101,11 +105,18 @@ export default function Home() {
 
       <section className="why-pleacode-section fade-in">
         <div className="why-pleacode-content">
-          <div>
+          <div className="why-pleacode-visual">
+            <div className="map-visual">
+              <div className="map-dots">
+                <WhyPleacodeDiagram />
+              </div>
+            </div>
+          </div>
+          <div className="why-pleacode-list-wrap">
             <h2 className="why-pleacode-title">Why Pleacode?</h2>
             <ul className="why-pleacode-list">
               {WHY_ITEMS.map((item) => (
-                <li key={item.text}>
+                <li key={item.text} className="why-pleacode-list-item">
                   <svg className="why-pleacode-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d={ICON_PATHS[item.icon]} />
                   </svg>
@@ -113,13 +124,6 @@ export default function Home() {
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="why-pleacode-visual">
-            <div className="map-visual">
-              <div className="map-dots">
-                <WhyPleacodeDiagram />
-              </div>
-            </div>
           </div>
         </div>
         <div className="why-pleacode-cta">

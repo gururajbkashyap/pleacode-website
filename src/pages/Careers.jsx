@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const JOBS = [
-  { title: 'Full Stack Developer', team: 'Technical Team', location: 'Bengaluru (On-Site)', type: 'Full-Time', path: '/jobdesign' },
+  { title: 'Full Stack Developer', team: 'Technical Team', location: 'In Office', type: 'Full-Time', path: '/jobdesign' },
 ];
 
 export default function Careers() {

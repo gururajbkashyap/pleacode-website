@@ -2,14 +2,13 @@ import { Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 
 const PRODUCTS = [
-  { name: 'Medical Management™', desc: 'Your command center for treatment' },
-  { name: 'AI Drafts™', desc: 'Draft any document in minutes' },
-  { name: 'Express Demands™', desc: 'High-quality demands in minutes by AI' },
-  { name: 'Demands™', desc: 'AI demands with professional review' },
-  { name: 'MedChrons™', desc: 'Trusted medical chronology with AI' },
-  { name: 'Workflow Processes™', desc: 'Surface insights and automate workflows' },
-  { name: 'Case Companion™', desc: 'AI assistant built for PI' },
-  { name: 'Case Preparation™', desc: 'Find priors and resolve missing information' },
+  { name: 'AI Drafts', desc: 'Draft any document in minutes' },
+  { name: 'Express Demands', desc: 'High-quality demands in minutes by AI' },
+  { name: 'Demands', desc: 'AI demands with professional review' },
+  { name: 'MedChrons', desc: 'Trusted medical chronology with AI' },
+  { name: 'Workflow Processes', desc: 'Surface insights and automate workflows' },
+  { name: 'Case Companion', desc: 'AI assistant built for PI' },
+  { name: 'Case Preparation', desc: 'Find priors and resolve missing information' },
 ];
 
 export default function Navbar() {
@@ -24,10 +23,10 @@ export default function Navbar() {
         <div className="nav-dropdown">
           <Link to="/#platform">Products</Link>
           <div className="dropdown-menu">
-            <div className="dropdown-header">THE CLAIMS INTELLIGENCE PLATFORM™</div>
+            <div className="dropdown-header">THE CLAIMS INTELLIGENCE PLATFORM</div>
             <div className="dropdown-content">
               <div className="dropdown-column">
-                {PRODUCTS.slice(0, 4).map((p) => (
+                {PRODUCTS.slice(0, 3).map((p) => (
                   <Link key={p.name} to="/#platform" className="dropdown-item">
                     <div className="dropdown-item-name">{p.name}</div>
                     <div className="dropdown-item-desc">{p.desc}</div>
@@ -35,7 +34,7 @@ export default function Navbar() {
                 ))}
               </div>
               <div className="dropdown-column">
-                {PRODUCTS.slice(4, 8).map((p) => (
+                {PRODUCTS.slice(3, 7).map((p) => (
                   <Link key={p.name} to="/#platform" className="dropdown-item">
                     <div className="dropdown-item-name">{p.name}</div>
                     <div className="dropdown-item-desc">{p.desc}</div>

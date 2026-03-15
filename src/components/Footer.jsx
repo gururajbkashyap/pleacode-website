@@ -15,14 +15,13 @@ export default function Footer() {
         <div className="footer-column">
           <h4>Products</h4>
           <ul>
-            <li><Link to="/#platform">Medical Management™</Link></li>
-            <li><Link to="/#platform">AI Drafts™</Link></li>
-            <li><Link to="/#platform">Express Demands™</Link></li>
-            <li><Link to="/#platform">Demands™</Link></li>
-            <li><Link to="/#platform">MedChrons™</Link></li>
-            <li><Link to="/#platform">Workflow Processes™</Link></li>
-            <li><Link to="/#platform">Case Companion™</Link></li>
-            <li><Link to="/#platform">Case Preparation™</Link></li>
+            <li><Link to="/#platform">AI Drafts</Link></li>
+            <li><Link to="/#platform">Express Demands</Link></li>
+            <li><Link to="/#platform">Demands</Link></li>
+            <li><Link to="/#platform">MedChrons</Link></li>
+            <li><Link to="/#platform">Workflow Processes</Link></li>
+            <li><Link to="/#platform">Case Companion</Link></li>
+            <li><Link to="/#platform">Case Preparation</Link></li>
           </ul>
         </div>
         <div className="footer-column">

@@ -25,7 +25,7 @@ export default function Help() {
       <div className="help-section">
         <h2>Browse by Product</h2>
         <div className="help-grid">
-          {['AI Drafts™', 'Case Companion™', 'Workflow Processes', 'Express Demands™', 'Demands™', 'MedChrons™'].map((name) => (
+          {['AI Drafts', 'Case Companion', 'Workflow Processes', 'Express Demands', 'Demands', 'MedChrons'].map((name) => (
             <div key={name} className="help-card">
               <h3>{name}</h3>
               <p>Product support and documentation.</p>

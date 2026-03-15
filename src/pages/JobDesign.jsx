@@ -6,7 +6,7 @@ export default function JobDesign() {
           <h1>Full Stack Developer</h1>
           <div className="meta-pill-container">
             <span className="meta-pill">Technical Team</span>
-            <span className="meta-pill">Bengaluru (On-Site)</span>
+            <span className="meta-pill">In Office</span>
             <span className="meta-pill">Full-Time</span>
           </div>
         </header>
