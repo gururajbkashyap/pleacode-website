@@ -37,7 +37,7 @@ export default function JobDesign() {
                 <input id="job-email" type="email" name="email" required />
               </div>
               <div className="form-group resume-note">
-                <p className="resume-email-text">Send your resume to <a href="mailto:info.pleacode@gmail.com">info.pleacode@gmail.com</a></p>
+                <p className="resume-email-text">Send your resume to <a href="mailto:info@pleacode.com">info@pleacode.com</a></p>
               </div>
               <button type="submit" className="submit-btn">Submit Application</button>
             </form>

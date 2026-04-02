@@ -47,10 +47,13 @@ export default function Customers() {
   const [testimonialIndex, setTestimonialIndex] = useState(0);
   const itemsPerView = 2;
   const maxIndex = Math.max(0, TESTIMONIALS.length - itemsPerView);
+  const totalPages = Math.ceil(TESTIMONIALS.length / itemsPerView);
+  const activePage = Math.floor(testimonialIndex / itemsPerView);
   const visibleTestimonials = TESTIMONIALS.slice(testimonialIndex, testimonialIndex + itemsPerView);
 
-  const goPrev = () => setTestimonialIndex((i) => Math.max(0, i - 1));
-  const goNext = () => setTestimonialIndex((i) => Math.min(maxIndex, i + 1));
+  const goPrev = () => setTestimonialIndex((i) => Math.max(0, i - itemsPerView));
+  const goNext = () => setTestimonialIndex((i) => Math.min(maxIndex, i + itemsPerView));
+  const goToPage = (page) => setTestimonialIndex(Math.min(maxIndex, page * itemsPerView));
 
   return (
     <section className="page-content customers-page">
@@ -59,58 +62,54 @@ export default function Customers() {
         <p>See how leading personal injury firms use Pleacode to scale and win.</p>
       </div>
 
-      <div className="stories-section">
-        <h2>All Customer Stories</h2>
-        <div className="story-grid">
-          <div className="story-card">
-            <h3>Faster settlements with MedChrons</h3>
-            <p>How one firm reduced demand turnaround by 40%.</p>
+      <div className="results-section">
+        <p className="results-subtitle">RESULTS</p>
+        <h2>What firms are seeing</h2>
+        <p className="results-tagline">A quick snapshot of outcomes personal injury practices report after adopting Pleacode.</p>
+
+        <div className="results-grid">
+          <div className="result-card">
+            <div className="result-icon">⏱️</div>
+            <div className="result-body">
+              <p className="result-firm">McCready Law</p>
+              <h3>Hundreds of hours saved</h3>
+              <p className="result-text">By automating demand letter drafts and medical chronology summaries, this firm cut prep time by over 40%. Their team now spends more time negotiating and less on repetitive drafting checks.</p>
+              <span className="result-location">Illinois</span>
+            </div>
           </div>
-          <div className="story-card">
-            <h3>Scaling without the headcount</h3>
-            <p>AI Drafts and Workflow Processes at a 50-attorney practice.</p>
+
+          <div className="result-card">
+            <div className="result-icon">📈</div>
+            <div className="result-body">
+              <p className="result-firm">Hartley PI Group</p>
+              <h3>Stronger settlement outcomes</h3>
+              <p className="result-text">Demand letters are now data-backed with a consistent structure, making the case narrative clearer for adjusters. This led to a noticeable increase in policy-limit offers in less than 2 months.</p>
+              <span className="result-location">Texas</span>
+            </div>
           </div>
-          <div className="story-card">
-            <h3>Clearer medical timelines for motor vehicle cases</h3>
-            <p>A PI firm uses structured chronologies so adjusters see treatment and damages in one place—fewer follow-up requests.</p>
-          </div>
-          <div className="story-card">
-            <h3>Demand letters that match our strategy</h3>
-            <p>One practice relies on Pleacode for first drafts that follow their liability and damages framework, then they refine and send.</p>
-          </div>
-          <div className="story-card">
-            <h3>Keeping volume PI cases moving</h3>
-            <p>Small firm with a heavy caseload uses the platform to avoid bottlenecks on demand prep and stay on top of deadlines.</p>
-          </div>
-          <div className="story-card">
-            <h3>From intake to demand in less time</h3>
-            <p>Firm cut the time between file intake and sending a demand by getting draft chronologies and demand outlines sooner.</p>
-          </div>
-          <div className="story-card">
-            <h3>Fewer revisions on first drafts</h3>
-            <p>A PI practice found that demand drafts came back with liability, treatment, and damages already in order—so they spend less time rewriting.</p>
-          </div>
-          <div className="story-card">
-            <h3>Slip-and-fall and premises cases</h3>
-            <p>Firm handling premises liability uses the same workflow for demand prep so every case type gets a consistent, clear presentation.</p>
-          </div>
-          <div className="story-card">
-            <h3>Ready for mediation and trial</h3>
-            <p>When cases don’t settle early, one firm uses the same chronology and demand structure as a base for mediation and litigation prep.</p>
-          </div>
-          <div className="story-card">
-            <h3>Onboarding that didn’t slow us down</h3>
-            <p>New firm was up and running within a few weeks; support helped them map their existing process to the platform.</p>
+
+          <div className="result-card">
+            <div className="result-icon">🚦</div>
+            <div className="result-body">
+              <p className="result-firm">Sanders & Cole</p>
+              <h3>Improved adjuster response</h3>
+              <p className="result-text">Structured chronologies and precise damages summaries reduced adjuster questions by 50% in the first quarter. Faster responses keep cases moving and minimize evidence lag.</p>
+              <span className="result-location">Georgia</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="testimonials-section">
+        <p className="testimonials-subtitle">TESTIMONIALS</p>
         <h2 className="testimonials-title">What our customers say</h2>
+        <p className="testimonials-tagline">Trusted by personal injury teams to reduce drafting time, improve settlement outcomes, and scale operations.</p>
+
         <div className="testimonials-carousel-wrap">
           <button type="button" className="testimonial-arrow testimonial-arrow-prev" onClick={goPrev} aria-label="Previous" disabled={testimonialIndex === 0}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M15 18l-6-6 6-6" /></svg>
           </button>
+
           <div className="testimonials-track">
             {visibleTestimonials.map((t, i) => (
               <div key={i} className="testimonial-card">
@@ -120,9 +119,22 @@ export default function Customers() {
               </div>
             ))}
           </div>
+
           <button type="button" className="testimonial-arrow testimonial-arrow-next" onClick={goNext} aria-label="Next" disabled={testimonialIndex >= maxIndex}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 18l6-6-6-6" /></svg>
           </button>
+        </div>
+
+        <div className="testimonial-dots">
+          {Array.from({ length: totalPages }).map((_, page) => (
+            <button
+              key={page}
+              type="button"
+              className={`testimonial-dot ${page === activePage ? 'active' : ''}`}
+              onClick={() => goToPage(page)}
+              aria-label={`Go to testimonials page ${page + 1}`}>
+            </button>
+          ))}
         </div>
       </div>
     </section>

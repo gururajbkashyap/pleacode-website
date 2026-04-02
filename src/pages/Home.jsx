@@ -25,6 +25,12 @@ const BENEFITS = [
   { title: 'Secure & compliant', desc: 'Enterprise-grade security and compliance for sensitive case data' },
 ];
 
+const OUTCOME_CARDS = [
+  { firm: 'McCready Law', outcome: 'Hundreds of hours saved', state: 'Illinois', icon: 'time' },
+  { firm: 'Hartley PI Group', outcome: 'Stronger settlement outcomes', state: 'Texas', icon: 'trend' },
+  { firm: 'Sanders & Cole', outcome: 'Improved adjuster response', state: 'Georgia', icon: 'handshake' },
+];
+
 const PROCESS_STEPS = [
   'You share intake + medical records (securely)',
   'We analyze liability, treatment timeline & damages',
@@ -102,6 +108,7 @@ export default function Home() {
         </div>
         <div className="strong-line">We don&apos;t replace attorneys. We give them back their time.</div>
       </section>
+
 
       <section className="why-pleacode-section fade-in">
         <div className="why-pleacode-content">

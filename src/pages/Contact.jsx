@@ -10,7 +10,7 @@ export default function Contact() {
           <div className="icon-circle">📧</div>
           <h3>Email</h3>
           <p>General inquiries</p>
-          <a href="mailto:info.pleacode@gmail.com">info.pleacode@gmail.com</a>
+          <a href="mailto:info@pleacode.com">info@pleacode.com</a>
         </div>
       </div>
     </section>
