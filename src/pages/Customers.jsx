@@ -2,44 +2,44 @@ import { useState } from 'react';
 
 const TESTIMONIALS = [
   {
-    headline: 'Faster turnaround on demand letters',
-    quote: 'We used to spend a lot of time pulling together medical records and drafting demands. With Pleacode we get a solid first draft in a few days. It lets us send out demands sooner and keep more cases moving.',
-    client: 'R. Sharma, Personal Injury Firm (Ohio)',
+    headline: 'Drafts come back quicker than expected',
+    quote: 'We send the records over and get a structured draft back within a day or two. It still needs a review, but it saves us the time of starting from scratch on every file.',
+    client: 'Arjun Mehta, Personal Injury Firm (Mumbai, India)',
   },
   {
-    headline: 'Medical chronology that actually lines up',
-    quote: 'The chronology is clear and matches how we present damages in the demand. Adjusters don’t have to hunt for dates or treatment—it’s all in one place. That helps move negotiations along.',
-    client: 'Priya M., Personal Injury & Motor Vehicle Practice (Florida)',
+    headline: 'Chronology is easier to follow now',
+    quote: 'The treatment timeline is laid out clearly, which makes it easier when we are putting the demand together. Less time hunting through records for dates.',
+    client: 'Priya Nair, Motor Vehicle & PI Practice (Bengaluru, India)',
   },
   {
-    headline: 'Less back-and-forth on revisions',
-    quote: 'First drafts are structured the way we like—liability, treatment timeline, damages. We still review everything, but we’re doing fewer rounds of edits. That’s been a real time-saver on volume.',
+    headline: 'Fewer drafts going back and forth',
+    quote: 'We used to do three or four rounds of edits on most demands. Now it is usually one or two. The structure is mostly right on the first pass.',
     client: 'R. L., Personal Injury Law Firm (North Carolina)',
   },
   {
-    headline: 'Useful for both settlement and trial prep',
-    quote: 'When we do settle, the demand gives us a clear paper trail. When we don’t, the same structure works for litigation. We’re not redoing the story from scratch.',
-    client: 'A. Krishnan, Personal Injury & Premises Liability (Georgia)',
+    headline: 'Works for settlement and litigation both',
+    quote: 'The demand holds up whether we settle or go further. We are not rebuilding the narrative from scratch when a case moves to litigation.',
+    client: 'Sanjay Iyer, Personal Injury & Premises Liability (Chennai, India)',
   },
   {
-    headline: 'Scales with our caseload',
-    quote: 'We’re a small firm. We can’t add a full-time person for demands right now. Pleacode lets us handle more PI cases without that step. So far it’s been a good fit.',
+    headline: 'Manageable for a small team',
+    quote: 'We do not have the bandwidth to hire just for demand drafting. Pleacode fills that gap without adding headcount. It has been practical for our size.',
     client: 'S. Reddy, Personal Injury Firm (Michigan)',
   },
   {
-    headline: 'Consistent format across cases',
-    quote: 'Every demand follows the same structure—liability, treatment, damages. Our team knows where to find things, and we look more put-together when we send to carriers.',
-    client: 'D. W., Personal Injury Law Firm (Texas)',
+    headline: 'Consistent structure across all files',
+    quote: 'Every demand comes out in the same format — liability, treatment, damages in order. Our team knows what to expect and reviews go faster.',
+    client: 'Deepa Krishnamurthy, Personal Injury Law Firm (Hyderabad, India)',
   },
   {
-    headline: 'Good support when we needed it',
-    quote: 'Onboarding was straightforward and we had a few questions early on. The team walked us through the workflow and we were up and running within a couple of weeks.',
-    client: 'K. Patel, Personal Injury & Workers’ Comp (Illinois)',
+    headline: 'Onboarding was straightforward',
+    quote: 'Getting started did not take long. We had a few questions and the team was responsive. We were using it on real files within the first couple of weeks.',
+    client: 'Karan Patel, PI & Workers Comp Practice (Illinois)',
   },
   {
-    headline: 'Helps us stay on top of deadlines',
-    quote: 'We get reminders when records or drafts are due. For a busy PI practice that’s helpful—we don’t want cases sitting in a queue because we forgot to follow up.',
-    client: 'M. C., Personal Injury Firm (Pennsylvania)',
+    headline: 'Helps keep cases from sitting idle',
+    quote: 'When demands are ready faster, cases move faster. We are not waiting on drafts as a bottleneck the way we used to be.',
+    client: 'Meera Chandran, Personal Injury Firm (Pune, India)',
   },
 ];
 

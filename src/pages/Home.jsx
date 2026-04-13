@@ -5,7 +5,6 @@ import WhyPleacodeDiagram from '../components/WhyPleacodeDiagram';
 import Slideshow from '../components/Slideshow';
 
 const WHY_ITEMS = [
-  { icon: 'expand', text: 'The 1st proactive AI platform for personal injury' },
   { icon: 'grid', text: 'Built on the largest personal injury dataset' },
   { icon: 'message', text: 'A world-class onboarding team' },
   { icon: 'shield', text: 'SOC 2–audited and HIPAA–attested' },
@@ -13,13 +12,12 @@ const WHY_ITEMS = [
 ];
 
 const BENEFITS = [
-  { title: 'Faster turnaround', desc: '24–72 hours delivery on demand letters and case reviews' },
+  { title: 'Faster turnaround', desc: '24–48 hours delivery on demand letters and case reviews' },
   { title: 'Consistent formatting', desc: 'Uniform structure across all cases for seamless integration' },
   { title: 'Aligned narratives', desc: 'Demand letters perfectly aligned with medical chronology' },
   { title: 'Clear liability framing', desc: 'Precise damages breakdown and liability presentation' },
   { title: 'Scalable operations', desc: 'Grows with your caseload without increasing overhead' },
   { title: 'Audit-ready documentation', desc: 'Full traceability and structured records for every case' },
-  { title: 'Fewer revisions', desc: 'Draft quality that reduces rounds of edits and speeds time to send' },
   { title: 'Dedicated support', desc: 'Expert onboarding and ongoing support tailored to your practice' },
   { title: 'Settlement-focused drafts', desc: 'Demands built to anchor strong positions and accelerate resolution' },
   { title: 'Secure & compliant', desc: 'Enterprise-grade security and compliance for sensitive case data' },
@@ -82,7 +80,7 @@ export default function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1>
-            <span className="line1">Personal Injury.</span><br />
+            <span className="line1">Personal Injury</span><br />
             <span className="line2">Precision</span><br />
             <span className="line3">Architecture.</span>
           </h1>
@@ -134,7 +132,7 @@ export default function Home() {
           </div>
         </div>
         <div className="why-pleacode-cta">
-          <h3>Join the thousands of PI firms that transformed their practice with Pleacode.</h3>
+          <h3>Trusted by PI firms nationwide to close cases faster.</h3>
           <Link to="/#contact" className="cta-button">Schedule a Call</Link>
         </div>
       </section>
